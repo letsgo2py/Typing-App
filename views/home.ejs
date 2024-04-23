@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css" >
+    <title>Typing</title>
+</head>
+<body>
+    <div class="container">
+        <% if (locals.text) { %>
+            <div class="text">
+                <p id = "t1"><span class="highlight"><%= text[0]%></span><%= text.substr(1) %></p>
+            </div>
+        <% } else {%>
+            <p>Text is Loading</p>
+        <% } %>
+        
+        <div class="results" id="rem-result">
+            <div class="circle-div" >
+                <p id = "speed">Speed:</p>
+            </div>
+        </div>
+
+        <div class="start-div">
+            <p class="start">Press Enter To Start Typing</p>
+        </div>
+    </div>
+    <footer>
+        <p>Copyright © <%= new Date().getFullYear() %></p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
